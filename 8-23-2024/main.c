@@ -1,3 +1,6 @@
+/*lo renombre por que mi memoria muscular 
+siempre escribe lo del gcc con main jeje*/
+
 /* Libraries */
 #include <stdio.h>
 #include <stdlib.h>
