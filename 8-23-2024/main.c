@@ -43,7 +43,7 @@ void ex01()
   int *p_array = array;
   for (int i = 0; i <= 9 ; i++, p_array++)
   {
-      printf("array[%d] = %d\t->   addr = %p\n", i , *p_array, &p_array);
+      printf("array[%d] = %d\t->   addr = %p\n", i , *p_array, p_array);
   }
 }
 

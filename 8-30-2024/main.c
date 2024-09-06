@@ -58,6 +58,15 @@ void process_student_grade(void(*fA[])(char*, int), char *name, int grade) //fA 
   {
     fA[BEST](name, grade);
   }
+  else if (grade >= 60)
+  {
+    fA[NORMAL](name, grade);
+  }
+  else if (grade <= 59)
+  {
+    fA[MAD](name, grade);
+  }
+  return 0;
 }
 
   
