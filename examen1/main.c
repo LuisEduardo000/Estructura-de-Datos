@@ -67,10 +67,6 @@ Pruebe que su programa funcione con los ejemplos programados
 */
 /*------------------- INICIO RESPUESTA   ------------------ */
  
-   
-
-/* ------------------- FIN DE RESPUESTA   ------------------ */
-
 int examen01()
 {
   char secreto[10] = "Ewmehqmc";
@@ -78,14 +74,24 @@ int examen01()
   // INICIO RESPUESTA
     //Llama tu funcion aqui, pruebala con la variable secreto.
     //Prueba con mas cadenas para garantizar su funcionamiento.
-  
+  for (int i = 0 ; secreto[i] != '\0' ; i++)
+  {
+    char *a = &secreto[i];
+    //i + 1 por que la cadena 
+    if (( i + 1 ))
+  }
+
+
   // FIN DE RESPUESTA
   
-  printf("%s", secreto);
+  printf("Palabra desencriptada: %s", secreto);
   printf("\n");
  
   return 0;
-}
+} 
+
+/* ------------------- FIN DE RESPUESTA   ------------------ */
+
 
 
 /* ################      EJERCICIO 02 :    ################################ 
