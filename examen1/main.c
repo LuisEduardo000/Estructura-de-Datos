@@ -118,10 +118,19 @@ int examen01()
 /* ------------------- INICIO RESPUESTA   ------------------ */
 //Para la función. 
 //No habia entendido que iba aqui pero ya. 
-void convertir_temp(float t, char tipo)
+void convertir_temp(float *t, char tipo)
 {
-    
+    if (tipo == 'F')
+    {
+        *t = ( *t - 32 ) * 5 / 9;
+    }
+    else
+    {
+        *t = ( *t * 9 / 5) + 32 ;
+    }
 }
+
+void convertir_multiple_temp()
 
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
@@ -133,7 +142,7 @@ int examen02()
   printf("Temperatura actual es de: %.2f °%c\n", grados, tipo);
 
   /* ------------------- INICIO RESPUESTA   ------------------ */
-  //covertir_temp(?,?);
+  convertir_temp(&grados, tipo);
   /* ------------------- FIN DE RESPUESTA   ------------------ */
   
   printf("Que equivale a: %.2f °%c\n", grados, tipo);
@@ -144,7 +153,7 @@ int examen02()
   printf("Temperatura actual es de: %.2f °%c\n", grados, tipo);
 
   /* ------------------- INICIO RESPUESTA   ------------------ */
-  //covertir_temp(?,?);
+  convertir_temp(&grados, tipo);
   /* ------------------- FIN DE RESPUESTA   ------------------ */
 
   printf("Que equivale a: %.2f °%c\n", grados, tipo);
@@ -153,16 +162,16 @@ int examen02()
     Temperatura actual es de: 35 °F
     Que equivale a: 1.67 °C
     Temperatura actual es de: 21 °C
-    Mi dinero convertido es: 69.8 °F  
+    Mi dinero convertido es: 69.8 °F  (jsjsjs dinero??) 
  */
 
 
  /* Por 10 puntos extras: Crea una función llamada covertir_multiple_temps
  que pueda recibir un arreglo de temperaturas y haga funcionar el siguiente
  codigo :  (NOTA, no usar [] en la función) */
- char tipos[4] = {'C','F','C','F'};
  float temps[4] = {45, 110, 0, 0};
  int num_temps = 4;
+ char tipos[4] = {'C','F','C','F'};
 
  //convert_multiple_temps();  DESCOMENTA Y TERMINA .... 
   
