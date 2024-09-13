@@ -288,11 +288,20 @@ void examen04()
 */
 /* ------------------- RESPUESTA   ------------------ */
 // Declara tu función aquí
+typedef struct ej05
+{
+    int n;
+    char c;
+};
 
+int mult_condicional(void *pEstructura, int n)
+{
+     
+}
 
 int examen05()
 {
-
+  str str1 = { 1, 'a'}
   return 0;
 }
 /* ------------------- RESPUESTA   ------------------ */
