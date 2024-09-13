@@ -224,10 +224,10 @@ int escribe_doble(int *num, char letra)
 /* Declara tus punteros a funcion aqui: */
 /* ------------------- INICIO RESPUESTA   ------------------ */
 typedef void (*TDCuatro)(int *n);
-typedef int (*TDTriplica);
-typedef char (*TDConvierte);
-typedef int (*TDDuplica);
-typedef int (*TDEscribe_Doble);
+typedef int (*TDTriplica)(int *n);
+typedef char (*TDConvierte)(int *a, char **m);
+typedef int (*TDDuplica)(int *n);
+typedef int (*TDEscribe_Doble)(int *n, char l);
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
 /* Fin ejercicio 03 */
@@ -251,7 +251,16 @@ void examen04()
   char las_letras[3] = {/*No vale inicializar aqui */};
 
   /* ------------------- INICIA RESPUESTA   ------------------ */
+  int *p_a = arreglo;
+  char *p_ll = las_letras;
+  *(p_a) = 30;
+  *(p_a + 1) = 50;
+  *(p_a + 2) = 99;
 
+  *(p_ll) = 'z';
+  *(p_ll + 1) = 'x';
+  *(p_ll + 2) = 'y';
+  
   /* ------------------- FIN RESPUESTA   ------------------ */
   
   for(int i = 0; i < 3; i++)
