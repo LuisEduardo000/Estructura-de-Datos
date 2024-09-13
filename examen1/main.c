@@ -288,20 +288,33 @@ void examen04()
 */
 /* ------------------- RESPUESTA   ------------------ */
 // Declara tu función aquí
-typedef struct ej05
+typedef struct 
 {
     int n;
     char c;
-};
+} ej05;
 
-int mult_condicional(void *pEstructura, int n)
+int mult_condicional(void *pEstructura, int n1)
 {
-     
+    ej05 *str = (ej05*)pEstructura;
+    if (str -> c == 'a' || str -> c == 'b' || str -> c == 'c') //jsjsjs el operador flecha ya tenia rato sinm usarlo
+    {
+        return 0;
+    }
+    else 
+    {
+        return str -> n * n1;
+    }
 }
 
 int examen05()
 {
-  str str1 = { 1, 'a'}
+  ej05 str1 = {1 , 'a'}; 
+  ej05 str2 = {1 , 'd'};
+  int r1 = mult_condicional(&str1, 4);
+  int r2 = mult_condicional(&str2, 20);
+  printf("Resultado 1: %d\n", r1);
+  printf("Resultado 2: %d\n", r2);
   return 0;
 }
 /* ------------------- RESPUESTA   ------------------ */
