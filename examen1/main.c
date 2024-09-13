@@ -77,11 +77,16 @@ int examen01()
   for (int i = 0 ; secreto[i] != '\0' ; i++)
   {
     char *a = &secreto[i];
-    //i + 1 por que la cadena 
-    if (( i + 1 ))
+    // i + 1 por que la cadena inicia en 0 pero vamos a considerarlo como 1
+    if (( i + 1 ) % 2 != 0)
+    {
+        *a = *a + 1;
+    }
+    else 
+    {
+        *a = *a - 2;
+    }
   }
-
-
   // FIN DE RESPUESTA
   
   printf("Palabra desencriptada: %s", secreto);
@@ -105,16 +110,20 @@ int examen01()
   Si el usuario desea convertir 80 °F deberá de recibir 26.67 °F.
 
   Fórmulas de conversión:
-  °F = (°C x 9 / 5) +32
+  °F = (°C x 9 / 5) + 32
   °C = (°F - 32) x 5 / 9
 
 */
 
 /* ------------------- INICIO RESPUESTA   ------------------ */
-//Para la función.
+//Para la función. 
+//No habia entendido que iba aqui pero ya. 
+void convertir_temp(float t, char tipo)
+{
+    
+}
 
 /* ------------------- FIN DE RESPUESTA   ------------------ */
-
 
 int examen02()
 {
@@ -165,7 +174,6 @@ int examen02()
   return 0;
 }
 
-
 /* ################      EJERCICIO 03 :    ################################ 
 ################            10 pts         ################################ 
 Declara el numero de apuntadores a funcion necesarios para poder
@@ -179,7 +187,7 @@ void cuadrado(int *num)
 int triplica (int *num)
 {
   *num = (*num + *num + *num);
-  return;
+  return *num;
 }
 
 char * convierte(int *ascii, char ** modificador)
@@ -361,7 +369,7 @@ int examen06(void) {
 
 int main()
 {
-  char nombre[20] = "TUNOMBRE";
+  char nombre[20] = "Luis Eduardo";
   printf("-Examen 01: \n\tPor: \t\t%s\n", nombre);
   
   printf("--------------------ex01 ------------------------\n");
