@@ -32,13 +32,14 @@ Alumno: Luis Eduardo Gonzalez Gloria
 
   3: Cuál es la diferencia entre pasar por valor y pasar por referencia?
     R: Pasar por valor hace una copia del valor y pasar por referencia por referencia, pero la diferencia principal es como
-       se pueden usar ya que en la que pasa por valor no puedes modificar 
+       se pueden usar ya que en la que pasa por valor no puedes modificar la variable original y el por referencia si. 
 
   4: Qué es necesario hacer para acceder a los datos de una variable de tipo void *?
-    R: 
+    R: Se necesita un tipo de dato de apuntador, para que pueda ser interpretado mejor. 
 
   5: Cómo se recomienda inicializar un apuntador, y por qué es importante esta práctica?
-    R: 
+    R: 2 razones, una para mantener la jerarquía de los tipos de variable y evitar espacios vacios inesesarios en la ram 
+       y para evitar que el apuntador apunte a una espacio de memoria erroneo.
 
 */
 
