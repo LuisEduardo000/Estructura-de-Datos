@@ -130,7 +130,13 @@ void convertir_temp(float *t, char tipo)
     }
 }
 
-void convertir_multiple_temp()
+void convertir_multiple_temp(float *t, int n, char *tipo)
+{
+    for( int i = 0 ; i < n ; i++ )
+    {
+        convertir_temp(&t[i], tipo[i]);
+    }
+}
 
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
@@ -173,7 +179,7 @@ int examen02()
  int num_temps = 4;
  char tipos[4] = {'C','F','C','F'};
 
- //convert_multiple_temps();  DESCOMENTA Y TERMINA .... 
+ convertir_multiple_temp(temps, num_temps, tipos);
   
  for (int i = 0; i < num_temps; i++)
  {
