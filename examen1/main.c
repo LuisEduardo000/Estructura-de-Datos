@@ -223,7 +223,11 @@ int escribe_doble(int *num, char letra)
 
 /* Declara tus punteros a funcion aqui: */
 /* ------------------- INICIO RESPUESTA   ------------------ */
-
+typedef void (*TDCuatro)(int *n);
+typedef int (*TDTriplica);
+typedef char (*TDConvierte);
+typedef int (*TDDuplica);
+typedef int (*TDEscribe_Doble);
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
 /* Fin ejercicio 03 */
