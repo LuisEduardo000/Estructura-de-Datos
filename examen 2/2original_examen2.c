@@ -92,14 +92,17 @@ node LD1nuevo, LD2nuevo;
 
 
 /* ----------  INICIO RESPUESTA:  --------------- */
-node lastToFirst (node *header){
+node* lastToFirst (node *header){
   node *x = header;
-  node *y;
+  node *y = NULL;
   while (x->next){
       y = x;
       x = x->next;
   }
-  y -> next
+  y -> next = NULL;
+  x -> next = header;
+  header = x;
+  return header;
 }
 /* ----------  FIN RESPUESTA:  --------------- */
 
@@ -122,7 +125,8 @@ int ex01()
 
 /* ----------  INICIO RESPUESTA:  --------------- */
 // Espacio para que mandes llamar tu función y compruebes el resultado.
-
+  L1 = lastToFirst(L1);
+  L2 = lastToFirst(L2);
 /* ----------  FIN RESPUESTA:  --------------- */
   
   /* NO TOCAR */
@@ -159,7 +163,7 @@ int ex01()
 */
 
 /* ----------  INICIO RESPUESTA:  --------------- */
-
+void insertMiddle (dnode **LD1)
 /* ----------  FIN RESPUESTA:  --------------- */
 
 int ex02()
