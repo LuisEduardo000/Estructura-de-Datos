@@ -187,6 +187,8 @@ int ex01()
   }
   t -> prev = nNode;
 }*/
+
+
 /* ----------  FIN RESPUESTA:  --------------- */
 
 int ex02()
@@ -212,8 +214,8 @@ int ex02()
   LD2nuevo.value = 11;
 
   //Llamadas a las funciones que tienes que crear.
-//  insertMiddle(LD1,&LD1nuevo);
-//  insertMiddle(LD2,&LD2nuevo);
+  //insertMiddle(LD1,&LD1nuevo);
+  //insertMiddle(LD2,&LD2nuevo);
 
   printf("\nLista Doble 1 después del cambio:\n");
   printlist(LD1);
@@ -243,9 +245,10 @@ int ex03()
   lArray[3] = LD2;
   lArray[4] = NULL;
   lArray[5] = NULL;
-  for (int i=0; 1<4; i++){
+  for (int i = 0 ; i < 4 ; i++){
     printlist(lArray[i]);
   }
+  free(lArray);
   /* ----------  FIN DE RESPUESTA:  --------------- */
   return 0;
 }
@@ -290,7 +293,7 @@ int ex04()
   int* costo = (int*)malloc(Cities * sizeof(int));
   for (int i = 0; i < Cities; i++)
   {
-    city[i] = (char*)malloc(Cities* sizeof(char));
+    city[i] = (char*)malloc(100* sizeof(char));
     fscanf(txt, "%s $%d\n", city[i], &costo[i]);
     printf("%s - $%d\n", city[i], costo[i]);
   }
