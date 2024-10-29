@@ -282,7 +282,23 @@ int ex03()
 int ex04()
 {
 /* ----------  INICIO RESPUESTA:  --------------- */
-  FILE* txt = fopen("destinos.txt")
+  FILE* txt = fopen("destinos.txt", "r+");
+  int Cities;
+  fscanf(txt, "%d\n", &Cities);
+  char** city = (char**)malloc(Cities* sizeof(char));
+  int* costo = (int*)malloc(Cities * sizeof(int));
+  for (int i = 0; i < Cities; i++)
+  {
+    city[i] = (char*)malloc(Cities* sizeof(char));
+    fscanf(txt, "%s $%d\n", city[i], &costo[i]);
+    printf("%s - $%d\n", city[i], costo[i]);
+  }
+  fprintf(txt, "Luis Eduardo Gonzalez Gloria");
+  for (int i = 0; i < Cities; i++)
+  {
+    free(city[i]);
+  }
+  
 /* ----------  FIN RESPUESTA:  --------------- */
   return 0;
 }
