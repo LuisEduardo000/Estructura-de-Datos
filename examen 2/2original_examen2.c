@@ -163,7 +163,16 @@ int ex01()
 */
 
 /* ----------  INICIO RESPUESTA:  --------------- */
-void insertMiddle (dnode **LD1)
+void insertMiddle (int LD1nuevo, dNode **LD1)
+{
+  dNode* nNode = (dNode*)malloc(sizeof(dNode));
+  nNode -> data = LD1nuevo;
+  nNode -> prev = nNode -> next = NULL;
+  int i = 0; 
+  dNode *t = *LD1;
+
+
+}
 /* ----------  FIN RESPUESTA:  --------------- */
 
 int ex02()
