@@ -163,13 +163,11 @@ int ex01()
 */
 
 /* ----------  INICIO RESPUESTA:  --------------- */
-void insertMiddle (LD1** dNode, int LD1nuevo)
+void insertMiddle (node** dNode, int LD1nuevo)
 {
-  LD1* nNode = (LD1*)malloc(sizeof(LD1));
-  nNode -> data = LD1nuevo;
-  nNode -> prev = nNode -> next = NULL;
+  node* nNode = (node*)malloc(sizeof(node));
   int i = 0; 
-  LD1 *t = *dNode;
+  node *t = *dNode;
   while (t != NULL)
   {
     i++;
@@ -214,8 +212,8 @@ int ex02()
   LD2nuevo.value = 11;
 
   //Llamadas a las funciones que tienes que crear.
-  insertMiddle(LD1,&LD1nuevo);
-  insertMiddle(LD2,&LD2nuevo);
+  //insertMiddle(LD1,&LD1nuevo);
+  //insertMiddle(LD2,&LD2nuevo);
 
   printf("\nLista Doble 1 después del cambio:\n");
   printlist(LD1);
