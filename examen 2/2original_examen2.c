@@ -163,15 +163,31 @@ int ex01()
 */
 
 /* ----------  INICIO RESPUESTA:  --------------- */
-void insertMiddle (int LD1nuevo, dNode **LD1)
+void insertMiddle (LD1** dNode, int LD1nuevo)
 {
-  dNode* nNode = (dNode*)malloc(sizeof(dNode));
+  LD1* nNode = (LD1*)malloc(sizeof(LD1));
   nNode -> data = LD1nuevo;
   nNode -> prev = nNode -> next = NULL;
   int i = 0; 
-  dNode *t = *LD1;
-
-
+  LD1 *t = *dNode;
+  while (t != NULL)
+  {
+    i++;
+    t = t -> next;
+  }
+  int m = i / 2;
+  t = *dNode;
+  for (int j = 0; j < m; j++)
+  {
+    t = t -> next;
+  }
+  nNode -> next = t;
+  nNode -> prev = t -> prev; 
+  if (t->prev)
+  {
+    t -> prev -> next = nNode;
+  }
+  t -> prev = nNode;
 }
 /* ----------  FIN RESPUESTA:  --------------- */
 
