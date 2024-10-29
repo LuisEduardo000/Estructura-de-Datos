@@ -163,7 +163,7 @@ int ex01()
 */
 
 /* ----------  INICIO RESPUESTA:  --------------- */
-void insertMiddle (node** dNode, int LD1nuevo)
+/*void insertMiddle (node** dNode, int LD1nuevo)
 {
   node* nNode = (node*)malloc(sizeof(node));
   int i = 0; 
@@ -186,7 +186,7 @@ void insertMiddle (node** dNode, int LD1nuevo)
     t -> prev -> next = nNode;
   }
   t -> prev = nNode;
-}
+}*/
 /* ----------  FIN RESPUESTA:  --------------- */
 
 int ex02()
@@ -212,8 +212,8 @@ int ex02()
   LD2nuevo.value = 11;
 
   //Llamadas a las funciones que tienes que crear.
-  //insertMiddle(LD1,&LD1nuevo);
-  //insertMiddle(LD2,&LD2nuevo);
+//  insertMiddle(LD1,&LD1nuevo);
+//  insertMiddle(LD2,&LD2nuevo);
 
   printf("\nLista Doble 1 después del cambio:\n");
   printlist(LD1);
@@ -236,7 +236,16 @@ int ex02()
 int ex03()
 {
   /* ----------  INICIO DE RESPUESTA:  --------------- */
-
+  node** lArray = (node**)malloc(6* sizeof(node*));
+  lArray[0] = L1;
+  lArray[1] = L2;
+  lArray[2] = LD1;
+  lArray[3] = LD2;
+  lArray[4] = NULL;
+  lArray[5] = NULL;
+  for (int i=0; 1<5; i++){
+    printlist(lArray[i]);
+  }
   /* ----------  FIN DE RESPUESTA:  --------------- */
   return 0;
 }
@@ -273,7 +282,7 @@ int ex03()
 int ex04()
 {
 /* ----------  INICIO RESPUESTA:  --------------- */
-  
+  FILE* txt = fopen("destinos.txt")
 /* ----------  FIN RESPUESTA:  --------------- */
   return 0;
 }
@@ -344,7 +353,7 @@ int main()
   printf("\n=== E02: Ingresar nodo a la mitad\n");
   //ex02();
   printf("\n=== E03: Arreglo de listas\n");
-  //ex03();
+  ex03();
   printf("\n=== E04: Destinos \n");
   //ex04();
   printf("\n=== E05: Password \n");
