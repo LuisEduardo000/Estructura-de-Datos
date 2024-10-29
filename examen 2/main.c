@@ -243,7 +243,7 @@ int ex03()
   lArray[3] = LD2;
   lArray[4] = NULL;
   lArray[5] = NULL;
-  for (int i=0; 1<5; i++){
+  for (int i=0; 1<4; i++){
     printlist(lArray[i]);
   }
   /* ----------  FIN DE RESPUESTA:  --------------- */
@@ -369,7 +369,7 @@ void reverse(char *ptr)
   {
     char temp = ptr[i];
     ptr[i] = ptr[l - i - 1];
-    ptr[l - i - 1] = ;
+    ptr[l - i - 1] = temp;
   }
 }
 /* ----------  FIN RESPUESTA:  --------------- */
@@ -380,7 +380,7 @@ void ex06()
   printf("%s\n", prueba); //Debe imprimir "ITESO"
   /* ----------  INICIO RESPUESTA:  --------------- */
   //Llama tu función aquí.
-
+  reverse(prueba);
   /* ----------  FIN RESPUESTA:  --------------- */
   printf("%s\n", prueba); //Debe imprimir "OSETI"
 }
@@ -397,8 +397,8 @@ int main()
   printf("\n=== E04: Destinos \n");
   ex04();
   printf("\n=== E05: Password \n");
-  //ex05();
+  ex05();
   printf("\n=== E06: Reverse \n");
-  //ex06();
+  ex06();
   return 0;
 }
