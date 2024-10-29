@@ -4,4 +4,3 @@ Seul: $22000
 Chicago: $7200
 Manila: $13151
 Lima: $10100
-

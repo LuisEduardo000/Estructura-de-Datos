@@ -282,7 +282,8 @@ int ex03()
 int ex04()
 {
 /* ----------  INICIO RESPUESTA:  --------------- */
-  FILE* txt = fopen("destinos.txt", "r+");
+  FILE* txt = fopen("C:\\Users\\legg1\\Documents\\GitHub\\Estructura-de-Datos\\examen 2\\destinos.txt", "r+");
+
   int Cities;
   fscanf(txt, "%d\n", &Cities);
   char** city = (char**)malloc(Cities* sizeof(char));
@@ -293,12 +294,14 @@ int ex04()
     fscanf(txt, "%s $%d\n", city[i], &costo[i]);
     printf("%s - $%d\n", city[i], costo[i]);
   }
-  fprintf(txt, "Luis Eduardo Gonzalez Gloria");
+  fprintf(txt, "\nLuis Eduardo Gonzalez Gloria");
   for (int i = 0; i < Cities; i++)
   {
     free(city[i]);
   }
-  
+  free(city);
+  free(costo);
+  fclose(txt);  
 /* ----------  FIN RESPUESTA:  --------------- */
   return 0;
 }
@@ -321,7 +324,19 @@ int ex04()
 int ex05()
 {
   /* ----------  INICIO RESPUESTA:  --------------- */
-
+  FILE *data = fopen ("C:\\Users\\legg1\\Documents\\GitHub\\Estructura-de-Datos\\examen 2\\password.data", "rb");
+  int n;
+  char password[5];
+  while (fread(&n, sizeof(int), 1, data)) {
+    if (n == 123456) { // Encontramos el marcador
+      fread(&n, sizeof(int), 1, data); // Leer número del password
+      fread(password, sizeof(char), 4, data); // Leer caracteres del password
+      password[4] = '\0'; // Termina la cadena
+      printf("Password encontrado: %d%s\n", n, password);
+      break;
+    }
+  }
+  fclose(data);
  /* ----------  FIN RESPUESTA:  --------------- */
   return 0;
 }
@@ -347,7 +362,16 @@ int ex05()
 
 /* ----------  INICIO RESPUESTA:  --------------- */
 //Agrega aquí tus estructuras, funciones del Stack, y función "reverse".
-
+void reverse(char *ptr)
+{
+  int l = strlen(ptr);
+  for (int i = 0 ; i< l / 2 ; i++)
+  {
+    char temp = ptr[i];
+    ptr[i] = ptr[l - i - 1];
+    ptr[l - i - 1] = ;
+  }
+}
 /* ----------  FIN RESPUESTA:  --------------- */
 
 void ex06()
@@ -371,7 +395,7 @@ int main()
   printf("\n=== E03: Arreglo de listas\n");
   ex03();
   printf("\n=== E04: Destinos \n");
-  //ex04();
+  ex04();
   printf("\n=== E05: Password \n");
   //ex05();
   printf("\n=== E06: Reverse \n");
