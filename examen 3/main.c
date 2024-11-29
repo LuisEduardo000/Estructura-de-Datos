@@ -41,15 +41,15 @@ char alumno[100] = "Escribe tu nombre aquí";
 4)	¿Por qué implementamos un conjunto mediante un árbol binario de búsqueda en lugar de utilizar una lista enlazada o un arreglo? Justifica bien tu respuesta.	
 
   R= Se usa un arbol binario por que es mucho mas eficiente ya que en promedio tiene que hacer menos pasos para llegar al valor deciado 
-  (creo que era una funcion logaritmica para el arbol y para la lista es x=x) 
+  (creo que era una funcion logaritmica para el arbol y para la lista es x=x, osea lineal) aparte de que a un arbol le puedes dar el orden que quieras
 
 5)	Al crear un TDA / Librería ¿Por qué utilizamos void pointers en lugar de datos de un tipo específico?
 
-  R=
+  R= Se usa para tener una mayor flexibilidad y poder cambiar el tipo de dato del que se esta trabajando
 
 6) Menciona una diferencia entre un conjunto y un mapa, desde el punto de vista de su comportamiento, no de su implementación:
 
-  R=
+  R= Un conjunto no guarda numeros repetidos, y un mapa si lo permite
 
 ******************************************************** Teoría 2: 4 preguntas de 10 puntos       /40 pts **************************************************************
 
@@ -64,6 +64,15 @@ char alumno[100] = "Escribe tu nombre aquí";
   0     6                20
 
   R=
+             10
+          /      \
+        3         16
+      /   \      /   \
+    1      8   11     18 
+   /     /        \     \
+  0     6         14     20
+      /          /
+     5          13
 
 
 8) Asume que se crea un montículo binario "máximo" a partir del siguiente arreglo.:
@@ -71,6 +80,7 @@ char alumno[100] = "Escribe tu nombre aquí";
     a) ¿Cómo queda el montículo binario (MaxHeap) inicialmente?  Puedes mostrar la respuesta como montículo binario (dibujo) o como arreglo.
  
       R=
+             
 
     b) ¿Cómo queda el montículo binario (MaxHeap) de arriba después de ejecutar offer(18)?  Puedes mostrar la respuesta como montículo binario (dibujo) o como arreglo.
  
