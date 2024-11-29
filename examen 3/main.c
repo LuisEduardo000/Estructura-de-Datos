@@ -356,7 +356,7 @@ color dequeue(PriorityQueue *pq) {
 
 void ejercicio2()
 {
-  PriorityQueue pq = {pq.size = 0};
+  PriorityQueue pq = {.size = 0};
   //Inicialización de colores.
   color c1, c2, c3, c4, c5;
   snprintf(c1.name, sizeof(c1.name), "Negro");
@@ -378,6 +378,11 @@ void ejercicio2()
   enqueue(&pq, c3);
   enqueue(&pq, c2);
   enqueue(&pq, c1);
+
+  while (pq.size > 0) {
+    color c = dequeue(&pq);
+    printf("%s (R=%d, G=%d, B=%d)\n", c.name, c.r, c.g, c.b);
+  }
   /* FIN DE RESPUESTA */
 }
 
