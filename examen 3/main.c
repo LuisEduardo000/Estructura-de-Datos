@@ -192,7 +192,7 @@ HashIndex
 
   Escribe o dibuja el estado final de la cola "q".
 
-  R= (, Jorge, Sofia, Erick, Diego)
+  R= (Jorge, Sofia, Erick, Diego)
 
 
 ******************************************************** Ejercicio 1: Mapa                 /20 pts **************************************************************
@@ -258,7 +258,7 @@ void displayMap(Map *map)
     printf("numero | veces\n");
     for (int i = 0; i < map->size; i++) 
     {
-        printf("    %d    |   %d\n", map->entries[i].key, map->entries[i].count);
+        printf("   %d   |   %d\n", map->entries[i].key, map->entries[i].count);
     }
 }
 
@@ -313,7 +313,17 @@ typedef struct color
 
 /* INCIA RESPUESTA */
 // aqui va una función que el priority queue necesita para funcionar
+typedef struct PriorityQueue {
+    color data[5];
+    int size;
+} PriorityQueue;
 
+int compareColors(color c1, color c2) {
+    if (c1.r != c2.r) {
+        return c1.r - c2.r;  //rojo
+    }
+    return c1.b - c2.b;      //azul
+}
 
 /* TERMINA RESPUESTA */
 
