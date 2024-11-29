@@ -325,10 +325,38 @@ int compareColors(color c1, color c2) {
     return c1.b - c2.b;      //azul
 }
 
+void enqueue(PriorityQueue *pq, color c) {
+    pq->data[pq->size++] = c;
+    for (int i = pq->size - 1; i > 0; i--) {
+        if (compareColors(pq->data[i], pq->data[i - 1]) > 0) {
+            color temp = pq->data[i];
+            pq->data[i] = pq->data[i - 1];
+            pq->data[i - 1] = temp;
+        } else {
+            break;
+        }
+    }
+}
+
+color dequeue(PriorityQueue *pq) {
+    if (pq->size <= 0) {
+        printf("Error: La cola está vacía.\n");
+        exit(1);
+    }
+    color highestPriority = pq->data[0];
+    for (int i = 1; i < pq->size; i++) {
+        pq->data[i - 1] = pq->data[i];
+    }
+    pq->size--;
+    return highestPriority;
+}
+
+
 /* TERMINA RESPUESTA */
 
 void ejercicio2()
 {
+  PriorityQueue pq = {pq.size = 0};
   //Inicialización de colores.
   color c1, c2, c3, c4, c5;
   snprintf(c1.name, sizeof(c1.name), "Negro");
@@ -345,8 +373,11 @@ void ejercicio2()
   /* INCIA RESPUESTA */
   // Inserta los 5 colores de arriba, sin importar el orden, comprueba
   // que al extraerlos, siempre sale el de mayor prioridad.
-
-
+  enqueue(&pq, c5);
+  enqueue(&pq, c4);
+  enqueue(&pq, c3);
+  enqueue(&pq, c2);
+  enqueue(&pq, c1);
   /* FIN DE RESPUESTA */
 }
 
@@ -356,5 +387,5 @@ int main()
   printf("\n----- Ejercicio 1:-----\n\n");
   ejercicio1();
   printf("\n----- Ejercicio 2:-----\n\n");
-  //ejercicio2();
+  ejercicio2();
 }
