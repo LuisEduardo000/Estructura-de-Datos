@@ -80,15 +80,35 @@ char alumno[100] = "Escribe tu nombre aquí";
     a) ¿Cómo queda el montículo binario (MaxHeap) inicialmente?  Puedes mostrar la respuesta como montículo binario (dibujo) o como arreglo.
  
       R=
-             
+            22
+          /    \
+       17        15
+      /  \      /  \
+    10    5    7    12 
+   /  \   / 
+  4    8  1      
 
     b) ¿Cómo queda el montículo binario (MaxHeap) de arriba después de ejecutar offer(18)?  Puedes mostrar la respuesta como montículo binario (dibujo) o como arreglo.
  
       R=
+            22
+          /    \
+       18        15
+      /  \      /  \
+    10    17    7    12 
+   /  \   / \
+  4    8  1  5    
 
     b) ¿Cómo queda el montículo binario (MaxHeap) de arriba después de ejecutar poll()? Puedes mostrar la respuesta como montículo binario (dibujo) o como arreglo.
 
       R=
+            18
+          /    \
+       17        15
+      /  \      /  \
+    10    5    7    12 
+   /  \   / 
+  4    8  1  
 
 9)	Asume que existe una Tabla Hash que almacena fechas, y se encuentra en el siguiente estado:
 
