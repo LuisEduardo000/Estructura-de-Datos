@@ -211,10 +211,56 @@ HashIndex
     5    |   2
 
   Puedes agregar cualquier librería que hayas hecho en clase o en tu proyecto.
-
 */
+
 /* INICIA RESPUESTA */
 // El mapa necesita 2 funciones y tal vez una estructura, declaralas aqui:
+typedef struct 
+{
+    int key;
+    int count;
+} MapEntry;
+
+typedef struct 
+{
+    MapEntry entries[10];
+    int size;
+} Map;
+
+void initMap(Map *map) 
+{
+    map->size = 0;
+}
+
+void increment(Map *map, int number) {
+    for (int i = 0; i < map->size; i++) 
+    {
+        if (map->entries[i].key == number) 
+        {
+            map->entries[i].count++;
+            return;
+        }
+    }
+    if (map->size < 10) 
+    {
+        map->entries[map->size].key = number;
+        map->entries[map->size].count = 1;
+        map->size++;
+    } 
+    else 
+    {
+        printf("Error.\n");
+    }
+}
+
+void displayMap(Map *map) 
+{
+    printf("numero | veces\n");
+    for (int i = 0; i < map->size; i++) 
+    {
+        printf("    %d    |   %d\n", map->entries[i].key, map->entries[i].count);
+    }
+}
 
 
 /* FIN DE RESPUESTA */
@@ -227,7 +273,14 @@ void ejercicio1()
   int size = 11;
 
   // INICIA RESPUESTA
-  
+  Map map;
+    initMap(&map);
+
+    for (int i = 0; i < size; i++) {
+        increment(&map, arreglo[i]);
+    }
+
+    displayMap(&map);
   // TERMINA RESPUESTA
 }
 
@@ -293,5 +346,5 @@ int main()
   printf("\n----- Ejercicio 1:-----\n\n");
   ejercicio1();
   printf("\n----- Ejercicio 2:-----\n\n");
-  ejercicio2();
+  //ejercicio2();
 }
