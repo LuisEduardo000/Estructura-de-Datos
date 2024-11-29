@@ -192,7 +192,7 @@ HashIndex
 
   Escribe o dibuja el estado final de la cola "q".
 
-  R= []
+  R= (, Jorge, Sofia, Erick, Diego)
 
 
 ******************************************************** Ejercicio 1: Mapa                 /20 pts **************************************************************
